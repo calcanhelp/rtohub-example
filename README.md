@@ -1,4 +1,4 @@
-# bun-react-template
+# RTO Hub integration example
 
 To install dependencies:
 
