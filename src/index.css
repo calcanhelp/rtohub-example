@@ -1,0 +1,207 @@
+:root {
+  line-height: 1.5;
+  color: #222;
+  background: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: sans-serif;
+}
+
+#root,
+.app {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.card {
+  width: min(100%, 30rem);
+  padding: 1.5rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.card.contract-card {
+  width: min(100%, 56rem);
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.intro {
+  margin: 0 0 1.25rem;
+  color: #555;
+}
+
+.upload-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.upload-form label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.upload-form label > span {
+  font-weight: 400;
+}
+
+.upload-form input,
+.upload-form select,
+.upload-form button {
+  font: inherit;
+}
+
+.upload-form input:not([type="checkbox"]):not([type="radio"]),
+.upload-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+}
+
+.upload-form input[type="file"] {
+  padding: 0.55rem;
+}
+
+.upload-form button {
+  padding: 0.75rem 1rem;
+  border: 1px solid #222;
+  border-radius: 8px;
+  color: #fff;
+  background: #222;
+  cursor: pointer;
+}
+
+.contract-form {
+  gap: 1.25rem;
+}
+
+.form-section,
+.form-subsection {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+}
+
+.form-section legend,
+.form-subsection legend {
+  padding: 0 0.4rem;
+  font-weight: 700;
+}
+
+.form-grid,
+.references-grid,
+.inline-fields,
+.triple-fields {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid,
+.references-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.inline-fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.triple-fields {
+  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.upload-form label.checkbox-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.upload-form label.checkbox-field > span {
+  order: 1;
+}
+
+.checkbox-field input {
+  order: 0;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.terms-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.terms-container {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.upload-form label.term-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+}
+
+.term-option input {
+  width: auto;
+  margin: 0;
+}
+
+.terms-message {
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .card.contract-card {
+    width: 100%;
+  }
+
+  .form-grid,
+  .references-grid,
+  .inline-fields,
+  .triple-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: auto;
+  }
+}
+
+.status {
+  margin: 1rem 0 0;
+  color: #555;
+}
